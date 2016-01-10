@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
   <display-name>Servlet</display-name>
+  
+  
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
@@ -9,4 +11,29 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+  
+  <servlet>
+  	<servlet-name>XMLServlet</servlet-name>
+  	<servlet-class>Servlet_XML_Configuration.XMLServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>XMLServlet</servlet-name>
+  	<url-pattern>/xmlservletpath</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+  	<servlet-name>FormServlet</servlet-name>
+  	<servlet-class>POST_Method_and_Passing_Parameters.FormServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>FormServlet</servlet-name>
+  	<url-pattern>/formservletpath</url-pattern>
+  </servlet-mapping>
+
+
+
+
+  
 </web-app>
