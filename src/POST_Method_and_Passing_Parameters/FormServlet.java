@@ -29,7 +29,18 @@ public class FormServlet extends HttpServlet
 		PrintWriter writer = response.getWriter();
 		String userId = request.getParameter("userid");
 		String userName = request.getParameter("username");
-		writer.println("Hello From Post " + userName);
+		String profession = request.getParameter("prof");
+		String locations[] = request.getParameterValues("location");
+		
+		
 		writer.println("Your user Id is " + userId);
+		writer.println("Hello From Post " + userName);
+		writer.println("Your Profession is " + profession);
+		
+		for (int i = 0; i < locations.length; i++) 
+		{
+			writer.println("You are at " + locations[i]);
+		}
+		
 	}
 }

@@ -33,6 +33,14 @@
   </servlet-mapping>
 
 
+  <servlet>
+  	<servlet-name>RSC</servlet-name>
+  	<servlet-class>Request_Session_and_Context.RSC</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>RSC</servlet-name>
+  	<url-pattern>/rscpath</url-pattern>
+  </servlet-mapping>
 
 
   
