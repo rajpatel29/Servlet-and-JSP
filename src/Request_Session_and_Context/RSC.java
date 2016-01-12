@@ -5,10 +5,20 @@ import java.io.PrintWriter;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebInitParam;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
+
+//1st way
+
+
+//@WebServlet(description = "rsc example", urlPatterns = { "/rscpath" }
+//			, initParams = @WebInitParam(name = "defaultuser" , value = "Chaman" )
+//		)
 
 public class RSC extends HttpServlet
 {
@@ -32,6 +42,10 @@ public class RSC extends HttpServlet
 		
 		//1 per application
 		writer.println("Context parameter has username as : " +  (String)  (context.getAttribute("SavedUserName") ));
+		
+		
+		//you can do the same using xml file
+		writer.println("Init parameter has default username as : " + (String) (this.getServletConfig().getInitParameter("defaultuser")));
 	}
 
 }
