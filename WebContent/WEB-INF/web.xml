@@ -46,4 +46,48 @@
   		<url-pattern>/rscpath</url-pattern>
   </servlet-mapping>
   
+  
+  
+  
+  <servlet>
+  
+  		<servlet-name>InitParams</servlet-name>
+		<jsp-file> /jspInit_and_InitParams.jsp</jsp-file>
+  		
+  		<init-param>
+  		
+  			<param-name>defaultname</param-name>
+  			<param-value>Default User Name</param-value>
+  		</init-param>
+  </servlet>
+  
+  <servlet-mapping>
+  
+  		<servlet-name>InitParams</servlet-name>
+  		<url-pattern> /jspInit_and_InitParams.jsp</url-pattern>
+  	
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 </web-app>
